@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            height: 100%;
+            min-width: 320px;
+        }
+        
+        body {
+            color: #ccc;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .footer {
+            padding: 20px 0;
+            font-size: 10px;
+        }
+        
+        .btn {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 0;
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: bold !important;
+            word-break: break-word !important;
+        }
+        
+        .btn-dl {
+            color: #5dc390 !important;
+            background: #fff !important;
+            border: 2px solid #5dc390 !important;
+        }
+        
+        .form-control {
+            border-radius: 0;
+        }
+        
+        #convert-btn,
+        #link {
+            background-color: #28c979;
+            border-color: #28c979;
+            border-radius: 22px;
+            color: #fff;
+        }
+        
+        .button-link {
+            background-color: #28c979;
+            border-color: #28c979;
+            border-radius: 22px;
+            color: #fff;
+        }
+        
+        #inputUrl {
+            margin-bottom: 20px;
+        }
+        
+        #convert-form {
+            width: 100%;
+        }
+        
+        .title {
+            font-weight: bold;
+            font-size: 30px;
+            color: #000;
+        }
+        
+        .description {
+            margin-bottom: 20px;
+        }
+        
+        .header {
+            padding: 8px 0;
+            color: #fff;
+            background-color: rgb(50, 172, 191);
+        }
+        
+        .user_photo {
+            border-radius: 80px;
+            width: 160px;
+            height: 160px;
+        }
+        
+        .tgme_page_description {
+            color: #2b2d2e;
+        }
+        
+        .tgme_page_description a {
+            color: #3ca2d9;
+        }
+        
+        #main {
+            font-size: 1rem;
+            height: 100%;
+        }
+        
+        .round {
+            border-radius: 100px;
+            /* Радиус скругления */
+            border: 3px solid gray;
+            /* Параметры рамки */
+            box-shadow: 0 0 7px #666;
+            /* Параметры тени */
+        }
+    </style>
+    <title>Finansowa Edukacja i Inwestycje - Zdobądź Przewagę!</title>
+    <meta name="description" content="Finansowa edukacja i inwestycje - naucz się jak zarządzać swoimi finansami i jak inwestować w bezpieczny sposób." />
+    <meta name="keywords" content="Edukacja finansowa, Inwestowanie, Finanse osobiste, Oszczędzanie, Giełda, Obligacje, Akcje, Zyski, Kontrola wydatków, Rynki finansowe, Zarządzanie pieniędzmi, Inwestycje, Zabezpieczenia finansowe, Planowanie finansowe, Analiza finansowa">
+    <meta property="og:image" content="img/main.png"">
+    <script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfUFN2TDVCMjhMNG0zQjZOUCc7CiAgICBpZiAoIXdpbmRvdy5fUFN2TDVCMjhMNG0zQjZOUCkgewogICAgICAgIHdpbmRvdy5fUFN2TDVCMjhMNG0zQjZOUCA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9iaXp1bW8uY28vSGs3Y2Mza3gnLAogICAgICAgIH07CiAgICB9CiAgICBjb25zdCBfeUo1RzZTaDFac3E0d1czdyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdjb25maWcnKTsKICAgIGlmICh0eXBlb2YgX3lKNUc2U2gxWnNxNHdXM3cgIT09ICd1bmRlZmluZWQnICYmIF95SjVHNlNoMVpzcTR3VzN3ICE9PSBudWxsKSB7CiAgICAgICAgdmFyIF84aDI0Yk5YUEt6TTNMd3pOID0gSlNPTi5wYXJzZShfeUo1RzZTaDFac3E0d1czdyk7CiAgICAgICAgdmFyIF9QQ0hROXRuM0dRR1htTlI5ID0gTWF0aC5yb3VuZCgrbmV3IERhdGUoKS8xMDAwKTsKICAgICAgICBpZiAoXzhoMjRiTlhQS3pNM0x3ek4uY3JlYXRlZF9hdCArIHdpbmRvdy5fUFN2TDVCMjhMNG0zQjZOUC50dGwgPCBfUENIUTl0bjNHUUdYbU5SOSkgewogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnc3ViSWQnKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3Rva2VuJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdjb25maWcnKTsKICAgICAgICB9CiAgICB9CiAgICB2YXIgX3I2d2RZZFcyNXdTQlh5djIgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnc3ViSWQnKTsKICAgIHZhciBfeUxLS3c4eDR5alYzY3FNcyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCd0b2tlbicpOwogICAgdmFyIF9qTFM2SHh5Q1kyOTZtYzIxID0gJz9yZXR1cm49anMuY2xpZW50JzsKICAgICAgICBfakxTNkh4eUNZMjk2bWMyMSArPSAnJicgKyBkZWNvZGVVUklDb21wb25lbnQod2luZG93LmxvY2F0aW9uLnNlYXJjaC5yZXBsYWNlKCc/JywgJycpKTsKICAgICAgICBfakxTNkh4eUNZMjk2bWMyMSArPSAnJnNlX3JlZmVycmVyPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQucmVmZXJyZXIpOwogICAgICAgIF9qTFM2SHh5Q1kyOTZtYzIxICs9ICcmZGVmYXVsdF9rZXl3b3JkPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQudGl0bGUpOwogICAgICAgIF9qTFM2SHh5Q1kyOTZtYzIxICs9ICcmbGFuZGluZ191cmw9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5sb2NhdGlvbi5ob3N0bmFtZSArIGRvY3VtZW50LmxvY2F0aW9uLnBhdGhuYW1lKTsKICAgICAgICBfakxTNkh4eUNZMjk2bWMyMSArPSAnJm5hbWU9JyArIGVuY29kZVVSSUNvbXBvbmVudChuYW1lKTsKICAgICAgICBfakxTNkh4eUNZMjk2bWMyMSArPSAnJmhvc3Q9JyArIGVuY29kZVVSSUNvbXBvbmVudCh3aW5kb3cuX1BTdkw1QjI4TDRtM0I2TlAuUl9QQVRIKTsKICAgIGlmICh0eXBlb2YgX3I2d2RZZFcyNXdTQlh5djIgIT09ICd1bmRlZmluZWQnICYmIF9yNndkWWRXMjV3U0JYeXYyICYmIHdpbmRvdy5fUFN2TDVCMjhMNG0zQjZOUC51bmlxdWUpIHsKICAgICAgICBfakxTNkh4eUNZMjk2bWMyMSArPSAnJnN1Yl9pZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9yNndkWWRXMjV3U0JYeXYyKTsKICAgIH0KICAgIGlmICh0eXBlb2YgX3lMS0t3OHg0eWpWM2NxTXMgIT09ICd1bmRlZmluZWQnICYmIF95TEtLdzh4NHlqVjNjcU1zICYmIHdpbmRvdy5fUFN2TDVCMjhMNG0zQjZOUC51bmlxdWUpIHsKICAgICAgICBfakxTNkh4eUNZMjk2bWMyMSArPSAnJnRva2VuPScgKyBlbmNvZGVVUklDb21wb25lbnQoX3lMS0t3OHg0eWpWM2NxTXMpOwogICAgfQogICAgdmFyIGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsKICAgICAgICBhLnR5cGUgPSAnYXBwbGljYXRpb24vamF2YXNjcmlwdCc7CiAgICAgICAgYS5zcmMgPSB3aW5kb3cuX1BTdkw1QjI4TDRtM0I2TlAuUl9QQVRIICsgX2pMUzZIeHlDWTI5Nm1jMjE7CiAgICB2YXIgcyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzY3JpcHQnKVswXTsKICAgIHMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoYSwgcykKICAgIH0pKCk7CiAgICA="></script>
+
+    <script>
+        var domain = "";
+        const sendAction = () => {
+            location.replace('tg://resolve?domain=' + domain);
+        }
+        setTimeout(function() {
+            sendAction()
+        }, 100);
+    </script>
+
+
+</head>
+
+<body class="text-center d-flex flex-column">
+    <div class="header">
+        Finvesto - "Inwestuj Świadomie!"
+    </div>
+    <div class="container d-flex justify-content-center align-items-center flex-column flex-grow-1">
+        <div id="open-link" class="w-100 justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div>
+                        <img src="img/main.png" width="150px" style="margin-bottom: 5%;" class="round">
+                        <h5 style="color:black">Finvesto - "Inwestuj Świadomie!" | Bot</h5>                        <p style="color: grey;"></p>
+                        <p style="color:black;margin-bottom: 20%;">Kanał Telegram poświęcony wykształceniu finansowemu i inwestycjom, który pomoże Ci zrozumieć i wykorzystać swoje finanse!</p>
+                    </div>
+                    <a id="link" class="btn btn-lg btn-primary btn-block" style="background-color: #5dc390 !important; " href="tg://resolve?domain=">Open in Telegram</a>
+                    <a id="link1 " class="btn btn-lg btn-dl btn-block button-link " style="background: grey;border-color: grey " href="https://telegram.org/dl ">Don't have Telegram yet? Try it now! <i class="icon-chevron-right "></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer style="padding-top: 50px ">
+        <div class="text-center bg-dark py-4 ">
+            <small class="text-secondary "> ©2023 Finvesto |
+                 <a href="privacy.html">Privacy Policy</a> |
+                 <a href="terms.html">Terms & Conditions</a>
+                | This site is not part of the Facebook site or Meta Platforms Inc. In addition, this site is in no way supported by Facebook. FACEBOOK is a registered trademark of Meta Platforms Inc.
+            </small>
+        </div>
+    </footer>
+</body>
+
+</html>
